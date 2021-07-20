@@ -188,6 +188,9 @@ $color-google-blue, 'wear-os.svg');
 @include codelab-card(['tensorflow', 'tensor-flow'],
   $color-tensorflow-orange, 'tensorflow.svg');
 
+@include codelab-card(['r-lang'], 
+  $color-google-blue, 'r.svg');
+
 @include codelab-card(['unity'],
   $color-unity-grey, 'unity.svg');
 
