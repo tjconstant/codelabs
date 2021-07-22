@@ -2,7 +2,7 @@ summary: Introduction to R
 id: introduction-to-r
 categories: r-lang
 tags: tutorial
-status: Published  
+status: Draft  
 authors: Tom
 Feedback Link: <http://data.tjconstant.com>
 
@@ -61,11 +61,12 @@ c(1,2,3)
 
     [1] 1 2 3
 
-Positive  
-: There are six basic datatypes that vectors can contain. These types are
+<aside class="positive"> 
+There are six basic datatypes that vectors can contain. These types are
 “logical”, “integer”, “numeric”, “complex”, “character” and “raw”. R
 refers to these as “Atomic” modes, since they cannot be broken down into
 any more basic forms.
+</aside>
 
 ## Variables
 Duration: 10
@@ -80,13 +81,14 @@ variable called `welcome`, you would type this,
 welcome <- "Hello, World!"
 ```
 
-Positive  
-: Some people might wonder here why R uses `<-` rather than `=` like most
+<aside class="positive">  
+Some people might wonder here why R uses `<-` rather than `=` like most
 other programming languages do. The answer is the authors of R wanted to
 emphasize that assignment (storing a value) isn’t the same as equality
 (this is equal to this). It’s a small point, and after a few minutes of
 coding `<-` will seem perfectly natural. Happily, if you insist on using
 `=`, it’ll work just fine in **most** cases.
+</aside>
 
 To see the values stored in your `welcome` variable, you can use the
 `print()` function.
@@ -184,12 +186,13 @@ fruit_shop[1:2,] # First two rows, all columns
     1      Apple        Green         0.3
     2       Pear        Green         0.5
 
-Positive  
-: Notice you can use `#` to indicate comments in your code. These are
+<aside class="positive">  
+Notice you can use `#` to indicate comments in your code. These are
 useful and it’s very good practice to comment your code as you go so
 someone else (or you in a few months!) remember what you were doing and
 why. Comments are ignored on execution so they don’t interfere with how
 the code will run.
+</aside>
 
 ## Plotting Data
 Duration: 10
@@ -299,10 +302,11 @@ It was created by [Hadley Wickham](http://hadley.nz), who is now the
 chief data scientist as RStudio, and is one of the R community’s most
 prolific contributors.
 
-Positive  
-: The [ggplot website](https://ggplot2.tidyverse.org) is a fantasitc
+<aside class="positive"> 
+The [ggplot website](https://ggplot2.tidyverse.org) is a fantasitc
 source of how to use the package with very clear documentation and
 examples.
+</aside>
 
 To use a package, we must first install it. To install packages into R,
 you use the `install_packages()` function.
@@ -350,8 +354,8 @@ Lets break down this bit of code.
     what x, y, and colour values they should be using to be consistent
     with the data.
 
-Positive  
-: It’s also worth noting that when we passed the variables to the `aes()`
+<aside class="positive">   
+It’s also worth noting that when we passed the variables to the `aes()`
 function, we did so without quoting them (`age` instead of `"age"`). For
 people coming from other programming languages this quirk of R can be
 quite shocking. How does R know that `age` is a label and not a
@@ -360,6 +364,7 @@ down to a feature of R known as lazy evaluation. R doesn’t attempt to
 execute or read a variable until it absolutely has too. Programmers like
 Hadley Wickham have used this property of R extensively in their
 packages to make code more human-readable and friendly.
+</aside>
 
 ggplot is far more powerful that base graphics when plotting complex
 charts thanks to this simple separation between the data and the chart

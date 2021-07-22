@@ -50,7 +50,8 @@
 </code></pre>
 <pre><code>[1] 1 2 3
 </code></pre>
-<p>Positive<br> : There are six basic datatypes that vectors can contain. These types are &#34;logical&#34;, &#34;integer&#34;, &#34;numeric&#34;, &#34;complex&#34;, &#34;character&#34; and &#34;raw&#34;. R refers to these as &#34;Atomic&#34; modes, since they cannot be broken down into any more basic forms.</p>
+<aside class="special"><p>  There are six basic datatypes that vectors can contain. These types are &#34;logical&#34;, &#34;integer&#34;, &#34;numeric&#34;, &#34;complex&#34;, &#34;character&#34; and &#34;raw&#34;. R refers to these as &#34;Atomic&#34; modes, since they cannot be broken down into any more basic forms. </p>
+</aside>
 
 
       </google-codelab-step>
@@ -60,7 +61,8 @@
 <p>To store a vector inside of a named variable, R uses the <code><-</code> operator. For example, to store the character vector <code>"Hello, World!"</code> in a variable called <code>welcome</code>, you would type this,</p>
 <pre><code language="language-r" class="language-r">welcome &lt;- &#34;Hello, World!&#34;
 </code></pre>
-<p>Positive<br> : Some people might wonder here why R uses <code><-</code> rather than <code>=</code> like most other programming languages do. The answer is the authors of R wanted to emphasize that assignment (storing a value) isn&#39;t the same as equality (this is equal to this). It&#39;s a small point, and after a few minutes of coding <code><-</code> will seem perfectly natural. Happily, if you insist on using <code>=</code>, it&#39;ll work just fine in <strong>most</strong> cases.</p>
+<aside class="special"><p>   Some people might wonder here why R uses `&lt;-` rather than `=` like most other programming languages do. The answer is the authors of R wanted to emphasize that assignment (storing a value) isn&#39;t the same as equality (this is equal to this). It&#39;s a small point, and after a few minutes of coding `&lt;-` will seem perfectly natural. Happily, if you insist on using `=`, it&#39;ll work just fine in **most** cases. </p>
+</aside>
 <p>To see the values stored in your <code>welcome</code> variable, you can use the <code>print()</code> function.</p>
 <pre><code language="language-r" class="language-r">print(welcome)
 </code></pre>
@@ -118,7 +120,8 @@ print(fruit_shop)
 1      Apple        Green         0.3
 2       Pear        Green         0.5
 </code></pre>
-<p>Positive<br> : Notice you can use <code>#</code> to indicate comments in your code. These are useful and it&#39;s very good practice to comment your code as you go so someone else (or you in a few months!) remember what you were doing and why. Comments are ignored on execution so they don&#39;t interfere with how the code will run.</p>
+<aside class="special"><p>   Notice you can use `#` to indicate comments in your code. These are useful and it&#39;s very good practice to comment your code as you go so someone else (or you in a few months!) remember what you were doing and why. Comments are ignored on execution so they don&#39;t interfere with how the code will run. </p>
+</aside>
 
 
       </google-codelab-step>
@@ -182,7 +185,8 @@ print(fruit_shop)
 <p>There are lots of other base plotting functions in R, such as <code>barplot()</code>, <code>boxplot()</code> and <code>hist()</code>. However, the majority of data scientists forego the base plotting in favor of an open source alternative called ‘ggplot&#39;.</p>
 <h2 is-upgraded>ggplot</h2>
 <p>The <code>ggplot</code> package stands for the <strong>g</strong>rammar of <strong>g</strong>raphics plots. It&#39;s design is based on a book by Leland Wilkinson called, unsurprisingly, <a href="https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl" target="_blank">The Grammar of Graphics</a>. It was created by <a href="http://hadley.nz" target="_blank">Hadley Wickham</a>, who is now the chief data scientist as RStudio, and is one of the R community&#39;s most prolific contributors.</p>
-<p>Positive<br> : The <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot website</a> is a fantasitc source of how to use the package with very clear documentation and examples.</p>
+<aside class="special"><p>  The [ggplot website](https://ggplot2.tidyverse.org) is a fantasitc source of how to use the package with very clear documentation and examples. </p>
+</aside>
 <p>To use a package, we must first install it. To install packages into R, you use the <code>install_packages()</code> function.</p>
 <pre><code language="language-r" class="language-r">install.packages(&#34;ggplot2&#34;)
 </code></pre>
@@ -204,7 +208,8 @@ ggplot(data = Orange, mapping = aes(x = age, y = circumference, colour = Tree)) 
 <li>We&#39;ve mapped here the <code>x</code> values to <code>age</code>, the <code>y</code> values to <code>circumference</code>, and the <code>colour</code> values to the <code>Tree</code>. (The american spelling <code>color=</code> is also acceptable).</li>
 <li>In the subsequent lines, we have added using the <code>+</code> operator different geometries to represent our data, such as points and lines. These points and lines inherit the aesthetics, so they know what x, y, and colour values they should be using to be consistent with the data.</li>
 </ul>
-<p>Positive<br> : It&#39;s also worth noting that when we passed the variables to the <code>aes()</code> function, we did so without quoting them (<code>age</code> instead of <code>"age"</code>). For people coming from other programming languages this quirk of R can be quite shocking. How does R know that <code>age</code> is a label and not a variable? What happens if I have a variable <code>age <- "Tree"</code>? This comes down to a feature of R known as lazy evaluation. R doesn&#39;t attempt to execute or read a variable until it absolutely has too. Programmers like Hadley Wickham have used this property of R extensively in their packages to make code more human-readable and friendly.</p>
+<aside class="special"><p>    It&#39;s also worth noting that when we passed the variables to the `aes()` function, we did so without quoting them (`age` instead of `&#34;age&#34;`). For people coming from other programming languages this quirk of R can be quite shocking. How does R know that `age` is a label and not a variable? What happens if I have a variable `age &lt;- &#34;Tree&#34;`? This comes down to a feature of R known as lazy evaluation. R doesn&#39;t attempt to execute or read a variable until it absolutely has too. Programmers like Hadley Wickham have used this property of R extensively in their packages to make code more human-readable and friendly. </p>
+</aside>
 <p>ggplot is far more powerful that base graphics when plotting complex charts thanks to this simple separation between the data and the chart elements.</p>
 <p>Lets try a more complex examples using the example data set from ggplot, <code>diamonds</code>.</p>
 <pre><code language="language-r" class="language-r">ggplot(

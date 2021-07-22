@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-07-20T13:14:52+01:00",
+  "updated": "2021-07-20T13:52:05+01:00",
   "id": "introduction-to-r",
   "duration": 24,
   "title": "Introduction to R",
@@ -11,7 +11,7 @@
   "source": "introduction-to-r.md",
   "theme": "",
   "status": [
-    "published"
+    "draft"
   ],
   "category": [
     "r-lang"
