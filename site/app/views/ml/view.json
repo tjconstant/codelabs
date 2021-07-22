@@ -1,7 +1,8 @@
 
 {
     "title": "Machine Learning",
-    "description": "Machine Learning codelabs",
+    "description": "Machine learning codelabs covering data preprocessing, modelling and best practice. ",
     "tags": [],
-    "categories": []
+    "categories": [],
+    "logoUrl": "/ml/ml.png"
 }
